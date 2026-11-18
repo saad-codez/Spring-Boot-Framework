@@ -5,3 +5,8 @@ Dependency injection
 initialization
 ready to use
 bean destroy
+
+What is a Bean Scope?
+- It represents the number of objects created by IOC container from a single bean
+types of bean scope
+1. Singleton: Only one object is create

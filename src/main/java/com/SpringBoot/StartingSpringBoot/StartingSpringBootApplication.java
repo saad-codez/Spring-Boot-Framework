@@ -18,6 +18,19 @@ public class StartingSpringBootApplication {
 
 		SmartPhone phone = context.getBean(SmartPhone.class);
 		phone.switchOn();
+
+		// singleton bean scope
+
+		Car e1 = context.getBean(Car.class);
+		Car e2 = context.getBean(Car.class);
+		if (e1 == e2) {
+			System.out.println("They both are same because there is only one Car object Created by IOC");
+		}
+		else {
+			System.out.println("They are different objects");
+		}
+
+
 	}
 
 }
