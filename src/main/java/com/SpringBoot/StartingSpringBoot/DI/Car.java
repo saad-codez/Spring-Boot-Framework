@@ -1,5 +1,7 @@
 package com.SpringBoot.StartingSpringBoot.DI;
 
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -17,6 +19,18 @@ class Engine {
         this.engineType = engineType;
     }
 
+    //PostConstruct - executed before the initialization of the bean
+    @PostConstruct
+    public void createEngine(){
+        System.out.println("Engine Bean is Created");
+    }
+
+    @PreDestroy
+    public void removeEngine(){
+        System.out.println("Engine Bean is Destroyed");
+    }
+
+    //Start method
     public void start(){
         System.out.println(engineType + " Started....");
     }
