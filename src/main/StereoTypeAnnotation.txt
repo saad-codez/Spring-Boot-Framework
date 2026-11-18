@@ -1,0 +1,6 @@
+StereoType Annotations
+
+1.@Components - Used to create bean of the classes and store it in the IOC container
+2.@Service - Implements the @Components, but it is used to describe the business logic(service
+3.@Controller - Used on the classes which are interacting with the Web/clients.
+4.@Repository - Used on the classes related to database connection, interaction.
