@@ -1,0 +1,6 @@
+What is a container:
+- A container is responsible for creating the bean(object of a class) and managing it.
+
+Types of Container
+1. Bean Factory: Used in old Spring framework, provides basic features, created bean only when needed.
+2. ApplicationContext: Used in modern Spring framework, provides advance features, creates and stores beans before it is acutally used.
