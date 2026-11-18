@@ -20,11 +20,20 @@ public class StartingSpringBootApplication {
 		phone.switchOn();
 
 		// singleton bean scope
-
-		Car e1 = context.getBean(Car.class);
-		Car e2 = context.getBean(Car.class);
-		if (e1 == e2) {
+		Car c1 = context.getBean(Car.class);
+		Car c2 = context.getBean(Car.class);
+		if (c1 == c2) {
 			System.out.println("They both are same because there is only one Car object Created by IOC");
+		}
+		else {
+			System.out.println("They are different objects");
+		}
+
+		//prototype bean scope
+		SmartPhone s1 = context.getBean(SmartPhone.class);
+		SmartPhone s2 = context.getBean(SmartPhone.class);
+		if (s1 == s2) {
+			System.out.println("They both are same because there is only one Smartphone object Created by IOC");
 		}
 		else {
 			System.out.println("They are different objects");

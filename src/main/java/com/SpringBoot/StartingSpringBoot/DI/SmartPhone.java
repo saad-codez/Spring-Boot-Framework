@@ -1,6 +1,7 @@
 package com.SpringBoot.StartingSpringBoot.DI;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -22,6 +23,7 @@ class Battery {
 
 }
 @Component
+@Scope("prototype")
 public class SmartPhone {
     private Battery batteryType;
 
